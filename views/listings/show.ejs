@@ -1,0 +1,98 @@
+<%layout("../layouts/boilerplate")-%>
+    <div class="row mt-3 show">
+        <div class="col-10 offset-1">
+            <h4 style="font-size: 1.7rem;"><%=List.title%></h4>
+        <div class="card  offset-3">
+            <img src="<%=List.image.url%>" class="card-img-top show-img" alt="Listing_Image ">
+            <div class="card-body">
+            <p class="card-text">
+                <p>Owned By : <%=List.owner.username%></p>
+                <p style="font-size: .8rem"><b><%=List.description%></b></p> 
+                <p>Price :<b> &#8377; <%=(List.price||0).toLocaleString("en-In")%></b></p> 
+                <p>Location : <%=List.location%></p>
+                <p>Country : <%=List.country%></p>
+            </p>
+            </div>
+        </div>
+    </div>
+    <%if(curruser&&curruser._id.equals(List.owner._id)){%>
+        <div class="btns mb-5">
+            <a href="/listings/<%=List._id%>/edit" class="btn btn-dark col-1 offset-1 edit">Edit</a>
+            <form action="/listings/<%=List._id%>?_method=delete" method="post">
+                <button class="btn btn-dark offset-4 delete">Delete</button>
+            </form>
+        </div>
+    <%}%>
+        <div class="col-11 offset-1">
+            <hr>
+            <h3>Rate This Hotel</h3>
+           <% if(curruser){%>
+            <form action="/listings/<%=List.id%>/reviews" method="post" novalidate class="needs-validation">
+                <div class="mt-5 mb-3">
+                    <label for="rating" class="form-label"><b>Rating</b></label>
+                    <fieldset class="starability-checkmark">
+                        <input type="radio" id="no-rate" class="input-no-rate" name="review[rating]" value="1" checked aria-label="No rating." />
+                        <input type="radio" id="first-rate1" name="review[rating]" value="1" />
+                        <label for="first-rate1" title="Terrible">1 star</label>
+                        <input type="radio" id="first-rate2" name="review[rating]" value="2" />
+                        <label for="first-rate2" title="Not good">2 stars</label>
+                        <input type="radio" id="first-rate3" name="review[rating]" value="3" />
+                        <label for="first-rate3" title="Average">3 stars</label>
+                        <input type="radio" id="first-rate4" name="review[rating]" value="4" />
+                        <label for="first-rate4" title="Very good">4 stars</label>
+                        <input type="radio" id="first-rate5" name="review[rating]" value="5" />
+                        <label for="first-rate5" title="Amazing">5 stars</label>
+                      </fieldset>
+                </div>
+                
+                <div>
+                    <label class="form-label"for="comment"><b>Tell us more</b></label>
+                    <textarea name="review[comment]" required id="comment" rows="5" cols="20" class="form-control" placeholder="Share Your thoughts with other customers"></textarea>
+                    <div class="invalid-feedback">
+                        Please Provide  Valid Review!
+                      </div>
+                </div>
+                <button class="ratingbtn">Submit</button>
+            </form>
+        <%}%>
+        
+            
+        <!-- RENDER REVIEW -->
+         <p><b>All reviews</b></p>
+         <div class="row">
+            <%for(review of List.reviews){%>
+                <div class="card review-card col-5 ms-2 mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Author: @<%=review.author.username%></h5>
+                        <p class="starability-result card-text" data-rating="<%=review.rating%>">
+                            Rated: 3 stars
+                          </p>
+                        <p class="card-text">Comment : <%=review.comment%></p>
+    
+                        <form action="/listings/<%=List._id%>/reviews/<%=review._id %>?_method=DELETE" method="post">
+                            <button class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                    </div> 
+                </div>
+            <%}%>
+         </div>
+            
+               
+            
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
