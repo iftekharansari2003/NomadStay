@@ -190,3 +190,24 @@ footer{
    padding: 0.5rem 3rem 0.5rem 3rem;
    font-size: 1rem !important;
 }
+
+
+/*RESPONSIVENESS */
+@media (min-width: 600px) {
+        .f-info {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .f-info-social {
+            order: 1;
+        }
+
+        .f-info-text {
+            order: 2;
+        }
+
+        .f-info-links {
+            order: 3;
+        }
+    }
