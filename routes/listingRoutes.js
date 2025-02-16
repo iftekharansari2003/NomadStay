@@ -15,6 +15,13 @@ router.route('/')
 
 router.get("/search",wrapAsync(listingControler.searchListing)) 
 
+//TERMs Page
+router.get('/terms',wrapAsync(listingControler.Listingterms))
+
+//privacy
+router.get('/privacy',wrapAsync(listingControler.privacyPolicy))
+
+
  //New Route-2a
  router.get("/new",isLoggedIn,listingControler.rendernewForm)
 

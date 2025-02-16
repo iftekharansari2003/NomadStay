@@ -164,6 +164,7 @@ footer{
 .signup{
     background-color: #008000 !important;
     color: white !important;
+    width: 100%;
 }
 .showimg{
     background-size: cover !important;

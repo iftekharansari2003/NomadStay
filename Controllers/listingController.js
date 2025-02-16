@@ -83,3 +83,11 @@ module.exports.searchListing=async(req,res)=>{
    }
    res.render("searchedList.ejs",{Lists})
 }
+
+module.exports.Listingterms=async(req,res)=>{
+   res.render("terms.ejs")
+}
+
+module.exports.privacyPolicy=async(req,res)=>{
+    res.render("privacy.ejs")
+ }
