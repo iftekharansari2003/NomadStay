@@ -25,8 +25,8 @@
     <%}%>
         <div class="col-11 offset-1">
             <hr>
-            <h3>Rate This Hotel</h3>
            <% if(curruser){%>
+            <h3>Rate This Hotel <i class="fa-regular fa-face-smile"></i></h3>
             <form action="/listings/<%=List.id%>/reviews" method="post" novalidate class="needs-validation">
                 <div class="mt-5 mb-3">
                     <label for="rating" class="form-label"><b>Rating</b></label>
@@ -46,7 +46,7 @@
                 </div>
                 
                 <div>
-                    <label class="form-label"for="comment"><b>Tell us more</b></label>
+                    <label class="form-label"for="comment"><b>Tell us more </b>&nbsp; &nbsp;<i class="fa-regular fa-pen-to-square"></i></label>
                     <textarea name="review[comment]" required id="comment" rows="5" cols="20" class="form-control" placeholder="Share Your thoughts with other customers"></textarea>
                     <div class="invalid-feedback">
                         Please Provide  Valid Review!
@@ -58,8 +58,8 @@
         
             
         <!-- RENDER REVIEW -->
-         <p><b>All reviews</b></p>
-         <div class="row">
+         <div class="row mt-5">
+            <h4><b>All reviews</b></h4>
             <%for(review of List.reviews){%>
                 <div class="card review-card col-5 ms-2 mb-3">
                     <div class="card-body">

@@ -12,10 +12,11 @@ const upload = multer({ storage })
 router.route('/')
 .get(wrapAsync(listingControler.index))
 .post(isLoggedIn,upload.single('listing[image]'),validatelisting,wrapAsync(listingControler.createListing))
- 
+
+router.get("/search",wrapAsync(listingControler.searchListing)) 
+
  //New Route-2a
  router.get("/new",isLoggedIn,listingControler.rendernewForm)
-
 
  router.route("/:id")
  .put(isLoggedIn,isOwner,upload.single('listing[image]'),validatelisting,wrapAsync(listingControler.updateListing))
@@ -24,6 +25,7 @@ router.route('/')
 
  
  router.get("/:id/edit",isLoggedIn,isOwner,wrapAsync(listingControler.renderEditForm));
+
  
  
 

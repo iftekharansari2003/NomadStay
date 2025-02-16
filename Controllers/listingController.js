@@ -72,3 +72,14 @@ module.exports.showListing=async(req,res)=>{
    }
    res.render("show.ejs",{List})
 }
+
+//search
+module.exports.searchListing=async(req,res)=>{
+    let {Searched}=req.query;
+    const Lists= await Listing.find({$or: [{title:Searched},{location:Searched},{country:Searched}]})
+   if(Lists.length==0){
+       req.flash('failure','Sorry! No Hotel Are Available At Your Location')
+       return res.redirect('/listings')
+   }
+   res.render("searchedList.ejs",{Lists})
+}
