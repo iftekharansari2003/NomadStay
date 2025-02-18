@@ -17,7 +17,7 @@ module.exports.signIn=async(req,res)=>{
             if(err){
                 next(err)
             }
-            req.flash('Success',"Welcome To Waderlust")
+            req.flash('Success',"Welcome To NomadSaty")
             res.redirect('/listings') 
         })
      
@@ -33,7 +33,7 @@ module.exports.renderLoginForm=(req,res)=>{
 }
 
 module.exports.loginUser=async (req,res)=>{
-    req.flash('Success','Welcome to wanderlust! You are logged in')
+    req.flash('Success','Welcome to NomadStay! You are logged in')
     //REDIRECT
     let redirect=res.locals.redirectUrl || '/listings'
     res.redirect(redirect)
