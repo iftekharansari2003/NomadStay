@@ -11,7 +11,7 @@ body{
     background-color: white;
 }
 .navbar-brand p{
-    margin: 0 2rem .2rem 0;
+    margin: 0 1.8rem .2rem 0;
     color: red;
     font-size: 2rem;
     padding: 0;
@@ -45,7 +45,7 @@ footer{
 .f-info-social i{
     margin-left: 1rem;
 }
-.social{
+.social,.social1{
     color: black;
 }
 
