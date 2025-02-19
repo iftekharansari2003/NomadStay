@@ -1,11 +1,11 @@
 <%layout("../layouts/boilerplate")-%>
 <div class="row mt-3">
-    <h1 class="col-6 offset-3">SignUp On NomadStay</h1>
-    <p class="col-6 offset-3">Please fill in this fotm to create an account!</p>
-    <div class="col-6 offset-3">
+    <h1 class="col-6 offset-3 sign-h">SignUp</h1>
+    <p class="col-6 offset-3 sign-p">Please fill in this form to create an account!</p>
+    <div class="col-6 offset-3 sign-form">
         <form action="/signup" method="post" class="needs-validation" novalidate>
-            <div class="mb-3">
-                <label for="username" class="form-label">Username</label>
+            <div class="mb-3 sign-opt">
+                <label for="username" class="form-label"><b>Username</b></label>
                 <input type="text" name="username" placeholder="Enter Username" class="form-control" id="username"
                 required>
                 <div class="valid-feedback">
@@ -13,8 +13,8 @@
                 </div>
             </div>
 
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
+            <div class="mb-3 sign-opt">
+                <label for="email" class="form-label"><b>Email</b></label>
                 <input type="text" placeholder="Enter Email" name="email" class="form-control" id="email"
                 required>
                 <div class="valid-feedback">
@@ -22,8 +22,8 @@
                 </div>
             </div>
 
-            <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
+            <div class="mb-3 sign-opt">
+                <label for="password" class="form-label"><b>Password</b></label>
                 <input type="password" name="password" class="form-control" id="password"
                 required>
                 <div class="valid-feedback">
