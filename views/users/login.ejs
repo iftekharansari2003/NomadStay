@@ -1,12 +1,12 @@
 <%layout("../layouts/boilerplate")-%>
 <div class="row mt-3">
-    <h1 class="col-6 offset-3 login-h">Welcome to NomadStay</h1>
+    <h1 class="col-6 offset-3 login-h">Login</h1>
     <p class="col-6 offset-3 login-p">Please fill in this to Login!</p>
     <div class="col-6 offset-3 login-form">
         <form action="/login" method="post" class="needs-validation" novalidate>
             <div class="mb-3 login-opt">
                 <label for="username" class="form-label">Username</label>
-                <input type="text" placeholder="Enter Username" name="username" class="form-control" id="username"
+                <input type="text" placeholder="Enter Username" name="username" class="form-control form-input" id="username"
                 required>
                 <div class="valid-feedback">
                     Looks good!
@@ -15,13 +15,13 @@
 
             <div class="mb-3 login-opt">
                 <label for="password" class="form-label">Password</label>
-                <input type="password" name="password" class="form-control" id="password"
+                <input type="password" name="password" class="form-control form-input" id="password"
                 required>
                 <div class="valid-feedback">
                     Looks good!
                 </div>
             </div>
-            <button class="btn signup mb-5 mt-3">Login</button>
+            <button class="btn signup mt-3">Login</button>
         </form>
         <h5>Don't have an account? &nbsp;<a href="/signup" style="color: red; text-decoration: none; ">SignUp</a></h5>
     </div>

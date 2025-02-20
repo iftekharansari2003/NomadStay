@@ -199,6 +199,9 @@ footer{
    padding: 0.5rem 3rem 0.5rem 3rem;
    font-size: 1rem !important;
 }
+.signup{
+    margin-bottom: 3rem !important;
+}
 @media(max-width: 770px ){
     .card{
         min-width: 85% !important;
@@ -212,10 +215,12 @@ footer{
         width:80% !important;
         margin-left: 2.5rem !important;
         border-radius: .8rem;
+        margin-bottom: 5rem !important;
     }
     .sign-opt,.login-opt{
         font-weight: 600;
     }
+    
     .sign-p,.login-p{
         width: 80% !important;
         margin-left: 2.3rem !important;
@@ -249,21 +254,56 @@ footer{
         width:68% !important;
     }
     .d-flex{
-        width: 115% !important;
+        width: 175% !important;
+        height: 2rem;
+        /* margin-left: ; */
     }
     .checkboxtoggler{
-        width: 2em !important;
-        gap: 0.4em !important;
+        width: 1.7em !important;
+        gap: 0.2em !important;
+        position: absolute;
+        left: -2rem;
+        top: -0.3rem;
     }
     #toggleChecker:checked + #togglerLable .checkboxtoggler .line-2 {
-        transform: rotate(-45deg) translateY(0.19em) translateX(0.1em) !important;
+        transform: rotate(-45deg) translateY(0.3em) translateX(0.18em) !important;
     }
 
     #toggleChecker:checked + #togglerLable .checkboxtoggler .line-1 {
-        transform: rotate(45deg) translateY(0.5em) translateX(0.7em) !important;
+        transform: rotate(45deg) translateY(0.2em) translateX(0.7em) !important;
     }
     .nav-profile{
-        top: 4rem !important;
+        top: 3rem !important;
         right: 0.2rem !important;
     }
+    .form-input{
+        width: 100% !important;
+    }
+    h5{
+        font-size: .9rem !important;
+    }
+    .signup{
+        margin-bottom: 1rem !important;
+    }
+    .f-info{
+        height: 8rem;
+    }
+    .navbar-brand p {
+        font-size: 1.5rem;
+    }
+    .tax-toggle{
+        margin-top: 2rem !important;
+        width: 14rem !important;
+        margin-left: 0 !important;
+    }
+    .filters{
+        justify-content: space-around !important;
+    }
+    .form-switch .form-check-input {
+    position: relative;
+    top: .17em;
+    width: 1.4em !important;
+    height: 1rem;
+    }
+    
 }
