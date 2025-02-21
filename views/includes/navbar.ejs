@@ -58,7 +58,7 @@
     justify-content: center;
     top: 3rem;
     right: 1.2rem;
-    align-items: center !important;
+    align-items: flex-start !important;
     min-height: 8rem;
     min-width: 10rem;
     padding: 1.5rem;
@@ -105,12 +105,13 @@
     
         <div class="navbar-collapse" id="navbarNavAltMarkup">
           <div class="nav-profile">
-            <a class="nav-link" href="/listings/new">Add your Hotel</a>
             <% if(!curruser) { %>
-            <a class="nav-link" href="/signup"><b>Sign up</b></a>
-            <a class="nav-link" href="/login"><b>Log in</b></a>
+            <a class="nav-link" href="/signup" style="text-decoration: none;"><b> <i class="fa-solid fa-circle-user"></i>&nbsp; &nbsp;Signup</b></a>
+            <a class="nav-link" href="/login" style="text-decoration: none;"><b><i class="fa-solid fa-arrow-right-to-bracket"></i> &nbsp;&nbsp;Login</b></a>
+            <a class="nav-link" href="/listings/new" style="text-decoration: none;"><i class="fa-solid fa-hotel"></i> &nbsp;Add your Hotel</a>
             <% } %> <% if(curruser) { %>
-            <a class="nav-link" href="/logout"><b>Log out</b></a>
+            <a class="nav-link" href="/listings/new" style="text-decoration: none;"><i class="fa-solid fa-hotel"></i> &nbsp; &nbsp;Add your Hotel</a>
+            <a class="nav-link" href="/logout" style="text-decoration: none;"><b><i class="fa-solid fa-right-from-bracket"></i>&nbsp; &nbsp;Logout</b></a>
             <% } %>
           </div>
         </div>
