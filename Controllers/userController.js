@@ -17,7 +17,7 @@ module.exports.signIn=async(req,res)=>{
             if(err){
                 next(err)
             }
-            req.flash('Success',"Welcome To NomadSaty")
+            req.flash('Success',"Welcome To NomadStay")
             res.redirect('/listings') 
         })
      
@@ -33,7 +33,7 @@ module.exports.renderLoginForm=(req,res)=>{
 }
 
 module.exports.loginUser=async (req,res)=>{
-    req.flash('Success','Welcome to NomadStay! You are logged in')
+    req.flash('Success','Welcome Back To NomadStay!')
     //REDIRECT
     let redirect=res.locals.redirectUrl || '/listings'
     res.redirect(redirect)
@@ -44,7 +44,7 @@ module.exports.logoutUSer=(req,res,next)=>{
         if(err){
             return next(err)
         }
-        req.flash('Success','You Are Logged Out Successfully!')
+        req.flash('Success','Logged Out Successfully!')
         res.redirect('/listings')
     })
 }

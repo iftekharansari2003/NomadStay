@@ -25,7 +25,7 @@ module.exports.createListing=async(req,res,next)=>{
     let {id}=req.params;
     let list=await Listing.findById(id)
     if(!list){
-       req.flash('failure','Listing You Want To Edit Does Not Exists!')
+       req.flash('failure','Hotel Does not exist!')
        return res.redirect('/listings')
    }
    let orignalUrl=list.image.url;
@@ -67,7 +67,7 @@ module.exports.showListing=async(req,res)=>{
        }
     }).populate('owner');
    if(!List){
-       req.flash('failure','Listing You Have Requested Does Not Exists!')
+       req.flash('failure','Hotel Does Not Exists!')
        return res.redirect('/listings')
    }
    res.render("show.ejs",{List})
@@ -78,7 +78,7 @@ module.exports.searchListing=async(req,res)=>{
     let {Searched}=req.query;
     const Lists= await Listing.find({$or: [{title:Searched},{location:Searched},{country:Searched}]})
    if(Lists.length==0){
-       req.flash('failure','Sorry! No Hotel Are Available At Your Location')
+       req.flash('failure','No Hotel At Your Location')
        return res.redirect('/listings')
    }
    res.render("searchedList.ejs",{Lists})

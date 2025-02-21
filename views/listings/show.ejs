@@ -47,7 +47,7 @@
                 
                 <div>
                     <label class="form-label"for="comment"><b>Tell us more </b>&nbsp; &nbsp;<i class="fa-regular fa-pen-to-square"></i></label>
-                    <textarea name="review[comment]" required id="comment" rows="5" cols="20" class="form-control comment1" placeholder="Share Your thoughts with other customers"></textarea>
+                    <textarea name="review[comment]" required id="comment" rows="5" cols="20" class="form-control comment1 " placeholder="Share Your thoughts with other customers"></textarea>
                     <div class="invalid-feedback">
                         Please Provide  Valid Review!
                       </div>
@@ -58,8 +58,8 @@
         
             
         <!-- RENDER REVIEW -->
+        <h4><b>All reviews</b></h4>
          <div class="row mt-5">
-            <h4><b>All reviews</b></h4>
             <%for(review of List.reviews){%>
                 <div class="card review-card col-5 ms-2 mb-3">
                     <div class="card-body">
