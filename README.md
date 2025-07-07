@@ -1,2 +1,2 @@
 # Major-Project
-Nomad Stay 
+NomadStay Hotel Booking website 
