@@ -7,7 +7,7 @@
 - **Technologies Used**: HTML, CSS, JavaScript, Bootstrap, EJS 
 - **Frameworks**: React.js
 - **Features**:
-  - 📱 **Responsive Design**: Optimized for various devices
+  - 📱 **Responsive Design**: Optimized for various devices 
   - 🔍 **User-friendly Interface**: For searching and listing properties
   - 🗺️ **Mapbox API Integration**: For location-based search and property mapping
     
