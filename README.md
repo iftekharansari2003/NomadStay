@@ -25,7 +25,7 @@
   - 🗂️ **Structured Database Schema**: For efficient data management
   - 🔍 **Database Queries**: To retrieve and store property and user information
 
-#### Cloudinary Image Storage ☁️
+#### Cloudinary Image Storage ☁️ 
 - **Image Hosting**: All listing images are securely stored on Cloudinary, providing reliable and efficient image hosting. This ensures that images are easily accessible, optimized for performance, and enhance the overall user experience.
 
 #### Additional Features 🌟
