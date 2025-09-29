@@ -100,6 +100,9 @@ app.use("/listings",listings)
 app.use("/listings/:id/reviews",reviews)
 app.use('/',users)
 
+app.get("/", (req, res) => {
+    res.redirect("/listings");
+});
 
 //Error Handler For All Random/Incorrect Path/Routes
 app.all("*",(req,res,next)=>{
